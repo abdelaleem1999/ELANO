@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093919442759",
+    "project_id": "testfirebase-4e105",
+    "storage_bucket": "testfirebase-4e105.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093919442759:android:97fdd123cc07ba0bc16e62",
+        "android_client_info": {
+          "package_name": "ahmed.chat.bonus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093919442759-72ggmsp1dsqkr392bvqu75njbdm8klbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa2-9JwOdLr0t3aJcMdNLvrJs12e9cnSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093919442759-72ggmsp1dsqkr392bvqu75njbdm8klbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
