@@ -4,12 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:intl/intl.dart';
-
-import '../../const/shared_helper.dart';
-import '../../widgets/userComponent.dart';
 import '../User_chat/view.dart';
 
 class AllUsers extends StatefulWidget {
@@ -35,17 +30,11 @@ class _AllUsersState extends State<AllUsers> {
 
       flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-      /// Create an Android Notification Channel.
-      ///
-      /// We use this channel in the `AndroidManifest.xml` file to override the
-      /// default FCM channel to enable heads up notifications.
       await flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin>()
           ?.createNotificationChannel(channel);
 
-      /// Update the iOS foreground notification presentation options to allow
-      /// heads up notifications.
       await FirebaseMessaging.instance
           .setForegroundNotificationPresentationOptions(
         alert: true,
@@ -68,8 +57,6 @@ class _AllUsersState extends State<AllUsers> {
             android: AndroidNotificationDetails(
               channel.id,
               channel.name,
-              // TODO add a proper drawable resource to android, for now using
-              //      one that already exists in example app.
               icon: 'launch_background',
             ),
           ),
@@ -129,7 +116,6 @@ class _AllUsersState extends State<AllUsers> {
                       itemCount: snapshot.data.docs.length,
                       shrinkWrap: true,
                       physics: ScrollPhysics(),
-                      // scrollDirection: Axis.vertical,
                       itemBuilder: (context, index) {
                         return AllUserComponent(
                           name: snapshot.data.docs[index]['name'],

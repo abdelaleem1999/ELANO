@@ -123,13 +123,8 @@ class BottomBarController extends Cubit<BottomBarStates> {
 
   }
   Future<String?> isInternet() async {
-    print("099999999999999999999999999999999999999999999999999999999999999999999");
-    print("099999999999999999999999999999999999999999999999999999999999999999999");
-    print("099999999999999999999999999999999999999999999999999999999999999999999");
     var connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.mobile) {
-      print("3444444444444444444444444444444444444444444444444444444444444444444");
-
       // I am connected to a mobile network, make sure there is actually a net connection.
       if (await InternetConnectionChecker().hasConnection) {
         // Mobile data detected & internet connection confirmed.
@@ -139,7 +134,6 @@ class BottomBarController extends Cubit<BottomBarStates> {
         return 'no Internet';
       }
     } else if (connectivityResult == ConnectivityResult.wifi) {
-      print("88888888888888888888888888888888888888888888888888888888888888");
 
       // I am connected to a WIFI network, make sure there is actually a net connection.
       if (await InternetConnectionChecker().hasConnection) {

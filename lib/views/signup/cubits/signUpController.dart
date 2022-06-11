@@ -14,9 +14,7 @@ class SignUpController extends Cubit<SignUpStates> {
    late final String? x;
 
 
-  Future <String?> signUp(String email, String password ,
-      // String name ,String phone
-      )async{
+  Future <String?> signUp(String email, String password )async{
     try {
     emit(SignUpLoading());
     final response= await Dio().post(

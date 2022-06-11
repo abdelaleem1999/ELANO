@@ -45,7 +45,6 @@ class _AllUserComponentState extends State<AllUserComponent> {
 
               return  ;
 
-              // Show snak bar "this your Account"
 
             }else{
               Navigator.push(context, MaterialPageRoute(builder: (context)=>widget.Navigator!));
@@ -102,7 +101,6 @@ class _AllUserComponentState extends State<AllUserComponent> {
         Divider(),
       ],
     );
-    //keytool -genkey -v -keystore H:\key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:io';
@@ -414,9 +415,8 @@ class _BottomBarViewState extends State<BottomBarView> {
                     borderRadius: BorderRadius.circular(29),
                   ),
 
-                  // width: MediaQuery.of(context).size.width/1.2,
                   child: TextFormField(
-                    maxLengthEnforced: false,
+                    maxLengthEnforcement: MaxLengthEnforcement.none,
                     minLines: 1,
                     controller: widget.message!,
                     validator: (value) {
@@ -780,16 +780,6 @@ class _BottomBarViewState extends State<BottomBarView> {
                               ),
                               InkWell(
                                 onTap: () async {
-                                  // await  Fluttertoast.showToast(
-                                  //
-                                  //       msg: "Please wait a momment ",
-                                  //       toastLength: Toast.LENGTH_LONG,
-                                  //       gravity: ToastGravity.CENTER,
-                                  //       timeInSecForIosWeb: 12,
-                                  //       backgroundColor: Color(0xFF2556BF),
-                                  //       textColor: Colors.white,
-                                  //       fontSize: 18.0
-                                  //   );
 
                                   ScaffoldMessenger.of(context)
                                       .hideCurrentSnackBar();

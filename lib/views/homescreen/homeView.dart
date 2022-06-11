@@ -20,7 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
           return Column(
             children: [
               TextButton(onPressed: () {
-                // SenderController.of(context).PostToRealTime("sender", "message");
               }, child: Text("ook"))
             ],
           );

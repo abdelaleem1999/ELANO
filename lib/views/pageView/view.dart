@@ -36,7 +36,7 @@ class _PageViewDemoState extends State<PageViewDemo> {
         backgroundColor: Colors.white,
         body: Center(
           child: PageView(
-            physics:NeverScrollableScrollPhysics() ,
+            physics: NeverScrollableScrollPhysics(),
             controller: _controller,
             children: [
               Column(
@@ -46,9 +46,10 @@ class _PageViewDemoState extends State<PageViewDemo> {
                     child: Padding(
                       padding: const EdgeInsets.all(25.0),
                       child: Container(
-                        child: Image.asset("assets/laughing-man-with-phone-chatting-with-his-friends-cartoon_1284-33369.jpg",
-                        //assets/splash2.jpg
-                        fit: BoxFit.fill),
+                        child: Image.asset(
+                            "assets/laughing-man-with-phone-chatting-with-his-friends-cartoon_1284-33369.jpg",
+                            //assets/splash2.jpg
+                            fit: BoxFit.fill),
                       ),
                     ),
                   ),
@@ -59,17 +60,22 @@ class _PageViewDemoState extends State<PageViewDemo> {
                       children: [
                         Text(
                           "Welcome in ELANO chat  ",
-                          style:
-                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold,
-                            color: Color(0xff1063a5)
-                          ),
+                          style: TextStyle(
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff1063a5)),
                         ),
-                        Icon(FontAwesomeIcons.comment,
-                        color: Color(0xff1063a5),size: 32,)
+                        Icon(
+                          FontAwesomeIcons.comment,
+                          color: Color(0xff1063a5),
+                          size: 32,
+                        )
                       ],
                     ),
-                  ),                  Expanded(
-flex: 2,                    child: Row(
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         // TextButton(onPressed: () {
@@ -81,8 +87,8 @@ flex: 2,                    child: Row(
                         // }, child: Text("تخطي")),
                         ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  Color(0xff1063a5)),
+                              backgroundColor:
+                                  MaterialStateProperty.all(Color(0xff1063a5)),
                             ),
                             onPressed: () {
                               if (_controller.hasClients && x > 2) {
@@ -103,7 +109,7 @@ flex: 2,                    child: Row(
                               height: 50,
                               child: Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   Text(
                                     "Start",

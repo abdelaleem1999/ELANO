@@ -4,7 +4,6 @@ import 'package:bonus/views/login/cubits/LoginController.dart';
 import 'package:bonus/views/login/states/states.dart';
 import 'package:bonus/views/login/widgets/signButton.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../const/shared_helper.dart';
@@ -27,7 +26,6 @@ class _LoginBlockState extends State<LoginBlock> {
   @override
   Widget build(BuildContext context) {
     String? Tokens;
-    // final login = LoginController.of(context);
 
     return Padding(
       padding: const EdgeInsets.only(right: 10.0,left: 10),
